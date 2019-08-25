@@ -1,0 +1,20 @@
+type Mutation {
+  """An example field added by the generator"""
+  testField: String!
+}
+
+type Query {
+  """An example field added by the generator"""
+  testField: String!
+  todo(id: Int): Todo!
+
+  """get all todo"""
+  todos: [Todo!]!
+}
+
+type Todo {
+  id: ID!
+  label: String!
+  status: Boolean!
+}
+

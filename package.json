@@ -3,12 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/graphql-relay": "^0.4.10",
     "@types/jest": "24.0.15",
     "@types/node": "12.6.8",
     "@types/react": "16.8.23",
     "@types/react-dom": "16.8.5",
+    "graphql-relay": "^0.6.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-relay": "^5.0.0",
     "react-scripts": "3.0.1",
     "typescript": "3.5.3"
   },
@@ -16,7 +19,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "get-schema": "get-graphql-schema http://localhost:3000/graphql > schema.graphql"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,6 +35,20 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.5.0",
+    "@types/react-relay": "^5.0.0",
+    "babel-plugin-relay": "^5.0.0",
+    "get-graphql-schema": "^2.1.2",
+    "graphql": "^14.5.3",
+    "relay-compiler": "^5.0.0",
+    "relay-compiler-language-typescript": "^4.6.0"
+  },
+  "babel": {
+    "plugins": [
+      "relay"
     ]
   }
 }
